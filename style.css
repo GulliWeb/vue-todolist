@@ -7,3 +7,12 @@ h1{
     border-radius: 12px; padding: 20px; 
     color: white; 
 }
+
+/* Bin hover */
+li i:hover{
+    color: red;
+}
+
+li i:active{
+    color: black;
+}

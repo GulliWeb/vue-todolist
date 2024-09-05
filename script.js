@@ -15,11 +15,15 @@ createApp({
         }
     },
     // Metodi vue
-    computed: {
-        // Metodo che restituisce solo le toDo true
-        getCompletedItems (){
-            return this.todoItem.filter(item => item.done)
+    methods: {
+        // Metodo che restituisce solo le toDo true MILESTONE 1
+        // getCompletedItems (){
+        //     return this.todoItem.filter(item => item.done)
+        // }
+        toDoRemove(index){
+            this.todoItem.splice(index, 1)
         }
 
-    }
+    },
+    
 }).mount('#app');
