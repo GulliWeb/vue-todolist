@@ -27,6 +27,10 @@ createApp({
             this.todoItem.splice(index, 1)
         },
 
+        toDoUnderline(index){
+            this.todoItem[index].done = !this.todoItem[index].done; 
+        },
+
         toDoAdd(){
            if (this.newToDoText.trim().length >= 3 ) {
             this.todoItem.push({
@@ -36,6 +40,10 @@ createApp({
            } else{
             alert('Inserire una frase di almeno TRE lettere!')
            }
+           this.clearInput()
+        },
+        clearInput(){
+           this.newToDoText = ''
         }
     },  
 }).mount('#app');

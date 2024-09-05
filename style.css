@@ -1,11 +1,15 @@
 body{
     font-family: monospace;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
 
 h1{
     background: linear-gradient(to right, #ff7e5f, #feb47b); 
     border-radius: 12px; padding: 20px; 
     color: white; 
+    width: fit-content;
+    margin: 0 auto;
 }
 
 /* Bin hover */
@@ -19,4 +23,16 @@ li i:active{
 
 .text-decoration-line-through {
     text-decoration: line-through;
+}
+
+button{
+    border: none;
+}
+
+ul li i:hover{
+    cursor: pointer ;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }

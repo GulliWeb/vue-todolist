@@ -11,26 +11,26 @@
     <!-- Vue Js-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="script.js"></script>
-    <title>ToBooList</title>
+    <title>ToBooList</title> 
 </head>
 <body>
-    <h1 class="text-center display-4 bg-success">ToBoolist </h1>
-    <div id="app" class="container">
+    <h1 class="bg-success mt-1 mb-3">ToBoolist</h1>
+    <div id="app" class="container" style="border-radius: 12px; background-image: url(img/notebook-paper-background-texture-of-lined_9970861.jpg!sw800);">
         <div class="row">
             <div class="col-12">
                 <ul>
-                    <li v-for = "(item, index) in todoItem" class="mb-3 border p-1 ">
+                    <li v-for = "(item, index) in todoItem" @click="toDoUnderline(index)" class="mb-3 border p-1 cursor-pointer ">
                         <span :class = "{ 'text-decoration-line-through' : item.done }"> 
                             {{ item.text }} 
                         </span>
                          <i @click="toDoRemove(index)" class="ml-2 fas fa-trash-can"></i>
                     </li>
                 </ul>
-            <!-- Bottone dinamico per aggiungere elementi alla toDoList -->
              </div>
-             <div class="form w-100 d-flex justify-content-between">
-                <button class="btn btn-primary ml-5" @click="toDoAdd">Aggiungi</button>
-                <input v-model="newToDoText" @keyup.enter='toDoAdd()' class="w-75" type="text" id="txtTodo"  >
+             <div class="form w-50 d-flex justify-content-between">
+             <!-- Bottone dinamico per aggiungere elementi alla toDoList -->
+                <button style="background-color: #ff7e5f; border-radius: 12px;" class="btn btn-warning ml-5 text-white" @click="toDoAdd">Aggiungi</button>
+                <input v-model="newToDoText" @keyup.enter='toDoAdd()' class="w-75 text-white ml-5" type="text" id="txtTodo" style="background-color: #EED0AC; border-color: white;" >
              </div>
         </div>
     </div>
