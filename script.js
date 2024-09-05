@@ -11,8 +11,9 @@ createApp({
                 {text: 'Aggiornare profilo Github', done: true},
                 {text: 'Finire di sviluppare sito clone Playstation', done: false},
                 {text: 'Completare la certificazione JS FreeCodeCademy', done: false}
-            ]
-        }
+            ],
+            newToDoText: ''
+        };
     },
     // Metodi vue
     methods: {
@@ -24,8 +25,17 @@ createApp({
         // Metodo che al click sul cestino rimuove l'elemento dalla toDoList
         toDoRemove(index){
             this.todoItem.splice(index, 1)
-        }
+        },
 
-    },
-    
+        toDoAdd(){
+           if (this.newToDoText.trim().length >= 3 ) {
+            this.todoItem.push({
+                text: this.newToDoText,
+                done: false
+            })
+           } else{
+            alert('Inserire una frase di almeno TRE lettere!')
+           }
+        }
+    },  
 }).mount('#app');
