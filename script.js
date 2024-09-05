@@ -20,6 +20,8 @@ createApp({
         // getCompletedItems (){
         //     return this.todoItem.filter(item => item.done)
         // }
+
+        // Metodo che al click sul cestino rimuove l'elemento dalla toDoList
         toDoRemove(index){
             this.todoItem.splice(index, 1)
         }

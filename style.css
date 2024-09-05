@@ -16,3 +16,7 @@ li i:hover{
 li i:active{
     color: black;
 }
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}

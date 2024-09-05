@@ -20,7 +20,11 @@
             <div class="col-12">
                 <ul>
                     <li v-for = "(item, index) in todoItem" class="mb-3 border p-1 ">
-                        {{ item.text}} <i @click="toDoRemove(index)" class="ml-2 fas fa-trash-can"></i>
+                        <span :class = "{ 'text-decoration-line-through' : item.done }"> 
+                            {{ item.text }} 
+                        </span>
+                         <i @click="toDoRemove(index)" class="ml-2 fas fa-trash-can"></i>
+                    </li>
                 </ul>
             </div>
         </div>
