@@ -26,7 +26,7 @@ createApp({
         toDoRemove(index){
             this.todoItem.splice(index, 1)
         },
-
+        
         toDoUnderline(index){
             this.todoItem[index].done = !this.todoItem[index].done; 
         },
